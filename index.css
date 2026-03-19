@@ -13,16 +13,33 @@ body{
   width: 100%;
 
 }
+.nav-links{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 10px;
+  width: auto;
+  margin: none;
+  flex-wrap: nowrap;
+}
+.nav-links li{
+  padding: 0 10px;
+}
+
+#hamburger{
+ visibility: hidden;
+ cursor: pointer;
+
+}
 
 #nav{
   display: flex;
+  flex-direction: row;
+  margin-left:10%;
   align-items: center;
-  justify-content: space-between;
-  margin-left: 3%;
-  margin-top: 0.5%;
-  width: 80%;
-  font-size: 16.5px;
-  margin-left: 10.5%;
+  justify-content: space-around;
+  margin-right: 10%;
+  
 }
 
 .nav-links{
@@ -236,7 +253,6 @@ h2,h3{
   right: 30px;
 }
 
-
 @media (max-width: 1024px) {
 
   #nav {
@@ -244,16 +260,40 @@ h2,h3{
     margin-left: 3%;
     font-size: 13.5px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 8px;
     padding-bottom: 8px;
+    position: relative;
   }
 
   #nav img {
-    flex-basis: 100%;
     width: 90px;
-    display: block;
-    margin: 0 auto 6px auto;
+  }
+
+  #nav-menu {
+    display: none;
+  }
+
+  #hamburger {
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  #nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  #nav-menu li {
+    padding: 10px 20px;
   }
 
   .video video {
@@ -338,14 +378,41 @@ h2,h3{
     width: 100%;
     margin-left: 0;
     font-size: 13px;
-    justify-content: center;
+    justify-content: space-between;
     gap: 8px;
     padding: 8px 10px;
     box-sizing: border-box;
+    position: relative;
   }
 
   #nav img {
     width: 80px;
+  }
+
+  #nav-menu {
+    display: none;
+  }
+
+  #hamburger {
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  #nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  #nav-menu li {
+    padding: 10px 20px;
   }
 
   .images {
@@ -437,20 +504,43 @@ h2,h3{
     padding: 10px 6px;
   }
 
-  .nav-links {
-    display: none;
-  }
-
   #nav {
     justify-content: space-between;
     padding: 10px 14px;
     flex-wrap: nowrap;
+    position: relative;
   }
 
   #nav img {
     flex-basis: auto;
     width: 70px;
     margin-bottom: 0;
+  }
+
+  #nav-menu {
+    display: none;
+  }
+
+  #hamburger {
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  #nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  #nav-menu li {
+    padding: 10px 20px;
   }
 
   h1 {
@@ -507,8 +597,38 @@ h2,h3{
     letter-spacing: 0.3px;
   }
 
+  #nav {
+    position: relative;
+  }
+
   #nav img {
     width: 58px;
+  }
+
+  #nav-menu {
+    display: none;
+  }
+
+  #hamburger {
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  #nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  #nav-menu li {
+    padding: 10px 20px;
   }
 
   .icon span {
@@ -583,8 +703,7 @@ h2,h3{
   }
 
   .f-div p,
-  .f-link,
-  .nav-links {
+  .f-link {
     font-size: 0.88em;
   }
 
