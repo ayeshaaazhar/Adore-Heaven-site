@@ -596,10 +596,6 @@ h2,h3{
     padding: 9px 5px;
     letter-spacing: 0.3px;
   }
-  #logo{
-    margin-left: 70%;
-    margin-right: 70%;
-  }
 
   #nav {
     position: relative;
@@ -716,5 +712,4 @@ h2,h3{
     bottom: 12px;
     right: 12px;
   }
-
 }
